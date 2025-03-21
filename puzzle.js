@@ -23,12 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
     shuffleTiles()
     startTimer()
     startButton.textContent = 'Kết thúc'
+    startButton.classList.remove('btn-success')
+    startButton.classList.add('btn-danger')
   }
 
   function stopGame() {
     isGameRunning = false
     clearInterval(timer)
     startButton.textContent = 'Bắt đầu'
+    startButton.classList.remove('btn-danger')
+    startButton.classList.add('btn-success')
   }
 
   function shuffleTiles() {
@@ -67,10 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
       tiles[tileIndex],
       tiles[emptyIndex],
     ]
-
-    // Cập nhật vị trí của ô trống
-    emptyTile = tiles[emptyIndex]
-
     grid.innerHTML = ''
     tiles.forEach((tile) => grid.appendChild(tile))
   }
