@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Puzzle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .game-wrapper {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        margin: 40px auto;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="game-wrapper">
+        <div class="text-center mb-3">
+          <button class="btn btn-success btn-lg text-white">Bắt đầu</button>
+        </div>
+
+        <div
+          class="game-container row justify-content-center align-items-start"
+        >
+          <div class="col-lg-8 col-md-7 d-flex justify-content-center">
+            <div class="grid-container p-3 shadow-lg">
+              <div class="grid-item pastel-green">1</div>
+              <div class="grid-item pastel-red">2</div>
+              <div class="grid-item pastel-blue">3</div>
+              <div class="grid-item pastel-purple">4</div>
+              <div class="grid-item pastel-yellow">5</div>
+              <div class="grid-item pastel-pink">6</div>
+              <div class="grid-item pastel-blue">7</div>
+              <div class="grid-item pastel-gray">8</div>
+              <div class="grid-item pastel-green">9</div>
+              <div class="grid-item pastel-yellow">10</div>
+              <div class="grid-item pastel-light-green">11</div>
+              <div class="grid-item black-box"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5">
+            <div class="control-panel">
+              <div
+                class="card text-black text-center p-3 shadow"
+                style="background-color: #d4f8d4"
+              >
+                <h5>Đồng Hồ</h5>
+                <h3>00:00</h3>
+              </div>
+
+              <div class="card mt-3 p-3 text-center shadow">
+                <h5 class="mb-2">Hướng Dẫn Di Chuyển</h5>
+                <div class="d-flex flex-column align-items-center">
+                  <div class="d-flex justify-content-center">
+                    <div class="key">↑</div>
+                  </div>
+                  <div class="d-flex gap-2 mt-2">
+                    <div class="key">←</div>
+                    <div class="key">↓</div>
+                    <div class="key">→</div>
+                  </div>
+                  <div class="d-flex gap-2 mt-2">
+                    <div class="key">W</div>
+                  </div>
+                  <div class="d-flex gap-2 mt-2">
+                    <div class="key">A</div>
+                    <div class="key">S</div>
+                    <div class="key">D</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <div class="card p-3 shadow">
+            <h5 class="text-center">Lịch Sử Lượt Chơi</h5>
+            <table class="table table-striped table-bordered history-table">
+              <thead>
+                <tr>
+                  <th style="background-color: #e0e0e0; color: #000">#</th>
+                  <th style="background-color: #e0e0e0; color: #000">
+                    Bước đi
+                  </th>
+                  <th style="background-color: #e0e0e0; color: #000">
+                    Thời gian
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody id="history"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="puzzle.js"></script>
+</html>

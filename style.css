@@ -1,0 +1,97 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 15px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.control-panel {
+  max-width: 300px;
+}
+
+.pastel-green {
+  background-color: #d4f8d4;
+  color: #28a745;
+}
+.pastel-red {
+  background-color: #ffd6d6;
+  color: #dc3545;
+}
+.pastel-blue {
+  background-color: #d6e4ff;
+  color: #007bff;
+}
+.pastel-purple {
+  background-color: #e6d6ff;
+  color: #6f42c1;
+}
+.pastel-yellow {
+  background-color: #fff3cd;
+  color: #ffc107;
+}
+.pastel-pink {
+  background-color: #ffd6eb;
+  color: #e83e8c;
+}
+.pastel-gray {
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+.pastel-light-green {
+  background-color: #d4edda;
+  color: #155724;
+}
+.black-box {
+  background-color: black;
+  color: white;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 150px;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+.history-table thead {
+  background-color: #e0e0e0 !important;
+}
+
+.history-table thead th {
+  color: #000 !important;
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .control-panel {
+    width: auto;
+  }
+}
