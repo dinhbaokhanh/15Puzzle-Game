@@ -8,15 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
     timer,
     moveCount = 0
   let historyTable = document.getElementById('history')
+  let isGameRunning = false
 
   function startGame() {
+    if (isGameRunning) {
+      stopGame()
+      return
+    }
+
+    isGameRunning = true
     clearInterval(timer)
-    startTime = 0
     moveCount = 0
     timerDisplay.textContent = '00:00'
     shuffleTiles()
     startTimer()
     startButton.textContent = 'Kết thúc'
+  }
+
+  function stopGame() {
+    isGameRunning = false
+    clearInterval(timer)
+    startButton.textContent = 'Bắt đầu'
   }
 
   function shuffleTiles() {
@@ -55,11 +67,17 @@ document.addEventListener('DOMContentLoaded', function () {
       tiles[tileIndex],
       tiles[emptyIndex],
     ]
+
+    // Cập nhật vị trí của ô trống
+    emptyTile = tiles[emptyIndex]
+
     grid.innerHTML = ''
     tiles.forEach((tile) => grid.appendChild(tile))
   }
 
   function moveTile(event) {
+    if (!isGameRunning) return
+
     let keyMap = {
       ArrowUp: -4,
       ArrowDown: 4,
@@ -86,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
           clearInterval(timer)
           alert('YOU WIN!')
           saveHistory()
+          stopGame()
         }
       }
     }
