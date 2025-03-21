@@ -8,5 +8,5 @@ Công nghệ sử dụng
 - **JavaScript**: Xử lý logic trò chơi  
 
 Cách chơi  
-- **Mục tiêu**: Sắp xếp các ô số theo thứ tự từ **1 đến 15**, ô trống nằm ở góc dưới cùng bên phải.  
+- **Mục tiêu**: Sắp xếp các ô số theo thứ tự từ **1 đến 11**, ô trống nằm ở góc dưới cùng bên phải.  
 - **Cách di chuyển**: Nhấn các phím mũi tên hoặc **W, A, S, D** để di chuyển ô trống.  
